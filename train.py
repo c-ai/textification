@@ -26,8 +26,8 @@ if __name__ == "__main__":
     )
     print_results(*model.test(valid_data))
     
-    model.save_model("tickets.bin")
+    model.save_model("trained_model.bin")
 
     model.quantize(input=train_data, qnorm=True, retrain=True, cutoff=100000)
     print_results(*model.test(valid_data))
-    model.save_model("tickets.ftz")
+    model.save_model("trained_model.ftz")
