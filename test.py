@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     subject = str(sys.argv[1:])
     # Load the model
-    classifier = fastText.load_model('tickets.ftz')
+    classifier = fastText.load_model('trained_model.ftz')
     # Get fastText to classify each review with the model
     label, probability = classifier.predict(strip_formatting(subject), 1)
     
